@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.studentList {
+    background-color: red;
+    height: 200px;
+}
+
+.main-content {
+    min-height: 557px;
+}
+.form-control1{
+    width: 280px;
+}
+.input-group{
+    position: relative;
+}
+.aHide{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    font-size: 13px;
+    color: #c30000;
+    display: none;
+}
+.table th,
+.table td{
+    text-align: center;
+}
+thead tr>th:first-child{
+    width: 7%;
+}
+thead tr>th:nth-child(2){
+    width: 60%;
+}
+thead tr>th:nth-child(3){
+    width: 9%;
+}
+thead tr>th:nth-child(4){
+    width: 12%;
+}
+thead tr>th:nth-child(5){
+    width: 12%;
+}
+tbody>tr td:nth-child(2){
+    max-width: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.gray{
+    background-color: gray;
+}
+/*.modal-header,*/
+/*.modal-footer{*/
+/*    background-color: #8a6d3b;*/
+/*}*/
+/*.modal-body{*/
+/*    background-color: #8a874e;*/
+/*}*/
+.bulletin_title{
+    text-align: center;
+    height: 35px;
+    line-height: 35px;
+    /*border: 1px solid red;*/
+}
+.bulletin_detail{
+    float: right;
+    padding: 0 30px;
+    text-align: center;
+}
+.bulletinAuthor,
+.glyphicon-user{
+    color: #1d7db1;
+}
+.bulletinTime{
+    margin-left: 20px;
+}
+.textarea{
+    margin: 80px auto 20px;
+    width: 85%;
+}
+.bulletinContent{
+    height: 300px;
+    width: 100%;
+    line-height: 35px;
+    text-indent: 2em;
+    resize:none;
+    border:none;
+}

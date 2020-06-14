@@ -1,0 +1,113 @@
+
+<link rel="stylesheet" type="text/css" href="../css/normalize.css">
+<!--CSS RESET-->
+<link rel="stylesheet" type="text/css" href="../css/htmleaf-demo.css">
+<!--演示页面样式，使用时可以不引用-->
+<link href="../../css/Bootstrap/bootstrap.min.css" rel='stylesheet' type='text/css' />
+<link href="../../css/Bootstrap/style.css" rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="../../css/index.css">
+<link rel="stylesheet" href="../css/style.css">
+<script src="../../js/Bootstrap/jquery.min.js"></script>
+<script src="../../js/Bootstrap/jquery.cookie.min.js"></script>
+<script src="../../js/Bootstrap/bootstrap.min.js"></script>
+<script src="../../js/lib/bootoast/index.js"></script>
+<link rel="stylesheet" href="../../js/lib/bootoast/style.css">
+<script src="../../js/lib/confirm/index.js"></script>
+<script src="../js/photoWallLink.js"></script>
+<script src='../js/flipping.web.js'></script>
+<script src="../../js/data.js"></script>
+
+
+<div id="app" data-state="0">
+    <!--增删按钮-->
+    <div class="ui-big-images">
+<!--        <div class="ui-big-image" data-key="0">-->
+<!--            <button onclick="myClear(this)" class="fixed">删除照片 ×</button>-->
+<!--            <img src="../../images/photoWall/25.jpg" alt=""/>-->
+<!--        </div>-->
+<!--        <div class="ui-big-image" data-key="1">-->
+<!--            <button onclick="myClear(this)" class="fixed">删除照片 ×</button>-->
+<!--            <img src="../../images/photoWall/26.jpg" alt=""/>-->
+<!--        </div>-->
+<!--        <div class="ui-big-image" data-key="2">-->
+<!--            <button onclick="myClear(this)" class="fixed">删除照片 ×</button>-->
+<!--            <img src="../../images/photoWall/27.jpg" alt=""/>-->
+<!--        </div>-->
+<!--        <div class="ui-big-image" data-key="3">-->
+<!--            <button onclick="myClear(this)" class="fixed">删除照片 ×</button>-->
+<!--            <img src="../../images/photoWall/28.jpg" alt=""/>-->
+<!--        </div>-->
+<!--        <div class="ui-big-image" data-key="4">-->
+<!--            <button onclick="myClear(this)" class="fixed">删除照片 ×</button>-->
+<!--            <img src="../../images/photoWall/29.jpg" alt=""/>-->
+<!--        </div>-->
+<!--        <div class="ui-big-image" data-key="5">-->
+<!--            <button onclick="myClear(this)" class="fixed">删除照片 ×</button>-->
+<!--            <img src="../../images/photoWall/30.jpg" alt=""/>-->
+<!--        </div>-->
+    </div>
+    <div class="ui-thumbnails">
+<!--        <div class="ui-thumbnail small" tabindex="-1" data-key="0">-->
+<!--            <img src="../../images/photoWall/31.jpg" alt="" />-->
+<!--            <div class="ui-cuticle" data-flip-key="cuticle"></div>-->
+<!--        </div>-->
+<!--        <div class="ui-thumbnail small" tabindex="-1" data-key="1">-->
+<!--            <img src="../../images/photoWall/32.jpg" alt="" />-->
+<!--            <div class="ui-cuticle" data-flip-key="cuticle"></div>-->
+<!--        </div>-->
+<!--        <div class="ui-thumbnail small" tabindex="-1" data-key="2">-->
+<!--            <img src="../../images/photoWall/33.jpg" alt="" />-->
+<!--            <div class="ui-cuticle" data-flip-key="cuticle"></div>-->
+<!--        </div>-->
+<!--        <div class="ui-thumbnail small" tabindex="-1" data-key="3">-->
+<!--            <img src="../../images/photoWall/34.jpg" alt=""/>-->
+<!--            <div class="ui-cuticle" data-flip-key="cuticle"></div>-->
+<!--        </div>-->
+<!--        <div class="ui-thumbnail small" tabindex="-1" data-key="4">-->
+<!--            <img src="../../images/photoWall/35.jpg" alt="" />-->
+<!--            <div class="ui-cuticle" data-flip-key="cuticle"></div>-->
+<!--        </div>-->
+<!--        <div class="ui-thumbnail small" tabindex="-1" data-key="5">-->
+<!--            <img src="../../images/photoWall/36.jpg" alt="" />-->
+<!--            <div class="ui-cuticle" data-flip-key="cuticle"></div>-->
+<!--        </div>-->
+    </div>
+    <div class="ui-content">
+        <nav class="ui-nav">
+            <button id="prev" tabindex="-1" title="Previous">&lt;</button>
+            <button id="next" tabindex="-1" title="Next">&gt;</button>
+        </nav>
+
+        <div class="ui-articles txt">
+<!--            <article class="ui-article" data-key="0">-->
+<!--                <h2 class="ui-heading">看鱼</h2>-->
+<!--                <p class="ui-paragraph">小鱼也喜欢吃玉米吗？</p>-->
+<!--            </article>-->
+<!--            <article class="ui-article" data-key="1">-->
+<!--                <h2 class="ui-heading">朗诵</h2>-->
+<!--                <p class="ui-paragraph">你是爱，是暖，你是人间四月天    ——卡卡班张曼小朋友在进行诗朗诵 </p>-->
+<!--            </article>-->
+<!--            <article class="ui-article" data-key="2">-->
+<!--                <h2 class="ui-heading">慈善竞拍</h2>-->
+<!--                <p class="ui-paragraph">小朋友跟爸爸妈妈一起参加慈善竞拍</p>-->
+<!--            </article>-->
+<!--            <article class="ui-article" data-key="3">-->
+<!--                <h2 class="ui-heading">两人三脚</h2>-->
+<!--                <p class="ui-paragraph">考验配合度的时候到啦！两人三脚，谁能最先到达终点呢？</p>-->
+<!--            </article>-->
+<!--            <article class="ui-article" data-key="4">-->
+<!--                <h2 class="ui-heading">体检</h2>-->
+<!--                <p class="ui-paragraph">跟医生阿姨一起学 “啊——”，卡卡班小朋友在进行体检</p>-->
+<!--            </article>-->
+<!--            <article class="ui-article" data-key="5">-->
+<!--                <h2 class="ui-heading">Hello，Mr.smith</h2>-->
+<!--                <p class="ui-paragraph">小朋友们跟斯密斯老师一起学英文，练习口语</p>-->
+<!--            </article>-->
+        </div>
+    </div>
+</div>
+
+<script src="../js/kaKa.js"></script>
+
+
+

@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.myOut{
+    display: flex;
+    position: relative;
+    height: 900px;
+    background-image: url("../../images/photoWall/back2.jpg");
+    background-repeat: no-repeat;
+}
+.photoList{
+    position: absolute;
+    top:200px;
+    left:100px;
+    width: 300px;
+    height:300px;
+    text-align: center;
+    box-shadow:10px 20px 10px 0px rgba(0,0,0,0.5);
+    background-color:rgba(255,255,255,0.2);
+}
+.two{
+    left: 450px;
+}
+.three{
+    left:800px;
+}
+.p{
+    position: absolute;
+    top:110px;
+    left: 100px;
+    width: 100px;
+    height: 30px;
+    background-color: rgba(255,255,255,0.7);
+    line-height: 30px;
+    border-radius: 45px;
+    font-family: 幼圆;
+    font-weight: bolder;
+}
+.tu{
+    width: 270px;
+    height: 270px;
+    margin-top: 15px;
+    opacity: 0.8;
+}
+.photoList:hover .tu{
+    opacity: 1;
+}
+.photoList:hover .p{
+ display: none;
+}
+.look{
+    position: absolute;
+    top:110px;
+    left: 100px;
+    width: 100px;
+    height: 30px;
+    background-color: rgba(255,255,255,0.9);
+    line-height: 30px;
+    border-radius: 45px;
+    font-family: 幼圆;
+    font-size: 15px;
+    font-weight: bolder;
+    display: none;
+}
+.look a{
+    text-decoration: none;
+    color: black;
+}
+.photoList:hover .look{
+    display: block;
+    cursor: pointer;
+}
+
+.add{
+    position: absolute;
+    top:50%;
+    left: -10%;
+    color: rgba(0,0,0,0.61);
+    width:50px;
+    height: 130px;
+    font-size: 15px;
+    border: none;
+    background-color: rgba(255,255,255,0.35);
+    box-shadow:10px 10px 10px 0px rgba(0,0,0,0.5);
+}
+.add:hover{
+    cursor: pointer;
+}
+.myOut:hover .add{
+    left: 0;
+    transition: .5s;
+}
+.four{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top:570px;
+    left:100px;
+    text-align: center;
+    box-shadow:10px 20px 10px 0px rgba(0,0,0,0.5);
+    background-color:rgba(255,255,255,0.2);
+    display: none;
+}
+.four:hover{
+    cursor: pointer;
+}
+.myGrey{
+    width: 270px;
+    height: 270px;
+    margin-top: 15px;
+    opacity: 0.8;
+}
+.addP{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    background-color: rgba(255,255,255,0.7);
+    line-height: 30px;
+    border-radius: 45px;
+    font-family: 幼圆;
+    font-weight: bolder;
+    z-index: 2;
+    left: 34%;
+    top:36%;
+}

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="css/Bootstrap/bootstrap.min.css" rel='stylesheet' type='text/css' />
+    <!-- Custom CSS -->
+    <link href="css/Bootstrap/style.css" rel='stylesheet' type='text/css' />
+    <!-- Graph CSS -->
+    <link href="css/Bootstrap/lines.css" rel='stylesheet' type='text/css' />
+    <link href="css/Bootstrap/font-awesome.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/index.css">
+    <!-- jQuery -->
+    <script src="js/Bootstrap/jquery.min.js"></script>
+    <!-- Nav CSS -->
+    <link href="css/Bootstrap/custom.css" rel="stylesheet">
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="js/Bootstrap/metisMenu.min.js"></script>
+    <script src="js/Bootstrap/custom.js"></script>
+    <!-- Graph JavaScript -->
+    <script src="js/Bootstrap/d3.v3.js"></script>
+    <script src="js/Bootstrap/rickshaw.js"></script>
+    <script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+
+
+    <style>
+        .souSuo {
+            width: 150px;
+            height: 30px;
+            border: 1px solid #999999;
+            margin-top: 3px;
+            margin-left: 35px;
+            float: left;
+        }
+        
+        .floatL {
+            float: left;
+        }
+        
+        .bianJianNIu {
+            background-color: rgb(91, 192, 222);
+        }
+        
+        .left20 {
+            margin-left: 20px;
+        }
+        
+        .top10 {
+            margin-top: 10px;
+        }
+        
+        .top5 {
+            margin-top: 2px;
+        }
+        
+        .top20 {
+            margin-top: 20px;
+        }
+        
+        .topF {
+            margin-top: -10px;
+        }
+        
+        /*.center {*/
+        /*    margin: 0 auto;*/
+        /*}*/
+        
+        .ol {
+            padding: 7px 15px 0;
+        }
+        
+        .right {
+            text-align: right;
+        }
+        
+        .left25 {
+            margin-left: 25px;
+        }
+        
+        .top15 {
+            margin-top: 15px;
+        }
+        
+        .left2 {
+            margin-left: 2.7px;
+        }
+        
+        .topF20 {
+            margin-top: -20px;
+        }
+        
+        .ll {
+            padding: 5px 8px;
+        }
+        
+        .old {
+            width: 95px;
+            height: 26px;
+            padding-top: 7px;
+            padding-right: 15px;
+            padding-left: 0;
+            margin: 2px 0 5px;
+        }
+        
+        .lld {
+            width: 350px;
+            height: 40px;
+        }
+        
+        .top30 {
+            margin-top: 370px;
+        }
+    </style>
+</head>
+<form>
+    <select type="text" class="form-control1 control3  souSuo" id="buMen">
+            <option>请选择</option>
+            <option>保教部</option>
+            <option>财务部</option>
+            <option>行政部</option>
+            <option>人事部</option>
+            <option>后勤部</option>
+        </select>
+    <!-- <button class="btn btn-success btn-sm floatL  btn-primaryleft20" id="btnsouSuo">搜索</button> -->
+    <input type="button" class="btn btn-success btn-sm floatL  btn-primaryleft20" id="btnsousuo" value="搜索" />
+    <button class="btn btn-success btn-sm left20 btn btn-primary btn-lg" type="button" data-toggle="modal" data-target="#xinZengModal">新增</button>
+
+    <div class="bs-example4" data-example-id="contextual-table">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>部门编号</th>
+                    <th>部门名称</th>
+                    <th>部门负责人</th>
+                    <th>联系电话</th>
+                    <th>部门描述</th>
+                    <th>部门人数</th>
+                    <th>备注</th>
+                    <th>编辑</th>
+                </tr>
+            </thead>
+            <tbody id="body">
+                <!-- <tr class="active">
+                    <td scope="row">1</td>
+                    <td>保教部</td>
+                    <td>张三</td>
+                    <td>11111111</td>
+                    <td>负责幼儿园的保育工作</td>
+                    <td class="renShu">4</td>
+                    <td></td>
+                    <td>
+                        <button class="btn btn-danger btn-xs bianJianNIu" type="button">查看</button>
+                        <button class="btn btn-danger btn-xs bianJianNIu" type="button" onclick="del(this)">删除</button>
+                        <button class="btn btn-danger btn-xs bianJianNIu btn-lg" type="button" data-toggle="modal" data-target="#xinZengModal">更改</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td scope="row">2</td>
+                    <td>财务部</td>
+                    <td>李四</td>
+                    <td>11111111</td>
+                    <td>负责学校员工的工资的发放现金收付工作</td>
+                    <td class="renShu">5</td>
+                    <td></td>
+                    <td>
+                        <button class="btn btn-danger btn-xs bianJianNIu" type="button">查看</button>
+                        <button class="btn btn-danger btn-xs bianJianNIu" type="button" onclick="del(this)">删除</button>
+                        <button class="btn btn-danger btn-xs bianJianNIu" type="button">更改</button>
+                    </td>
+                </tr>
+                <tr class="success">
+                    <td scope="row">3</td>
+                    <td>行政部</td>
+                    <td>王五</td>
+                    <td>11111111</td>
+                    <td>负责各职能部门的关系协调</td>
+                    <td class="renShu">6</td>
+                    <td></td>
+                    <td>
+                        <button class="btn btn-danger btn-xs bianJianNIu" type="button">查看</button>
+                        <button class="btn btn-danger btn-xs bianJianNIu" type="button" onclick="del(this)">删除</button>
+                        <button class="btn btn-danger btn-xs bianJianNIu" type="button">更改</button>
+                </tr>
+                </tr>
+                <tr>
+                    <td scope="row">4</td>
+                    <td>人事部</td>
+                    <td>李老师</td>
+                    <td>11111111</td>
+                    <td>负责个类培训业务的联系及组织</td>
+                    <td class="renShu">0</td>
+                    <td></td>
+                    <td>
+                        <button class="btn btn-danger btn-xs bianJianNIu" type="button">查看</button>
+                        <button class="btn btn-danger btn-xs bianJianNIu" type="button" onclick="del(this)">删除</button>
+                        <button class="btn btn-danger btn-xs bianJianNIu" type="button">更改</button>
+                    </td>
+                </tr>
+                <tr class="info">
+                    <td scope="row">5</td>
+                    <td>后勤部</td>
+                    <td>张老师</td>
+                    <td>11111111</td>
+                    <td>负责管理幼儿园教师和孩子的安全以及生活上需求</td>
+                    <td class="renShu">7</td>
+                    <td></td>
+                    <td>
+                        <button class="btn btn-danger btn-xs bianJianNIu" type="button">查看</button>
+                        <button class="btn btn-danger btn-xs bianJianNIu" type="button" onclick="del(this)">删除</button>
+                        <button class="btn btn-danger btn-xs bianJianNIu" type="button">更改</button>
+                    </td>
+                </tr> -->
+            </tbody>
+        </table>
+<!--        <nav>-->
+<!--            <ul class="pagination pagination-lg center">-->
+<!--                <li><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>-->
+<!--                <li><a href="#">1</a></li>-->
+<!--                <li><a href="#">2</a></li>-->
+<!--                <li><a href="#">3</a></li>-->
+<!--                <li><a href="#">4</a></li>-->
+<!--                <li><a href="#">5</a></li>-->
+<!--                <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>-->
+<!--            </ul>-->
+<!--        </nav>-->
+    </div>
+
+    <!-- 新增Modal -->
+    <div class="modal fade" id="xinZengModal" tabindex="-1" role="dialog" aria-labelledby="xinZengModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="xinZengModalLabel top5">新增部门</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="/form/" method="post" class="form-horizontal">
+
+                        <div class="form-group">
+                            <label for="bianHaoinput" class="col-sm-2 control-label top5 right ol" disabled>部门编号</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control1 ll " id="bianHaoinput">
+                            </div>
+                            <label for="minCheninput" class="col-sm-2 control-label top5 right ol">部门名称</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control1 ll" id="minCheninput">
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="form-group">
+                            <label for="fuZeReninput" class="col-sm-2 control-label right top5 ol old">部门负责人</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control1 " id="fuZeReninput">
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group top20">
+                            <label for="lianxiPoneinput" class="col-sm-2 control-label right top5 ol">联系电话</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control1 " id="lianxiPoneinput">
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="form-group floatL top20">
+                            <label for="buMenMiaoShu" class="col-sm-2 control-label top5 right left20 ol  old">部门描述</label>
+                            <div class="col-sm-8">
+                                <textarea id="buMenMiaoShu" cols="50" rows="4" class="form-control1 lld"></textarea></div>
+                        </div>
+
+
+
+                        <div class="form-group floatL">
+                            <label for="renShuinput" class="col-sm-2 control-label top20  right old">部门人数</label>
+                            <div class="col-sm-8 ">
+                                <input type="text" class="form-control1 lld " id="renShuinput">
+                            </div>
+
+                        </div>
+
+                        <div class="form-group floatL ">
+                            <label for="beiZhu" class="col-sm-2 control-label top5 right left25 ol old ">备注</label>
+                            <div class="col-sm-8">
+                                <textarea id="beiZhu" cols="50" rows="4" class="form-control1  lld"></textarea></div>
+                        </div>
+
+
+                        <div class="form-group   floatL">
+                            <label for="name1input" class="col-sm-2 control-label   top5 right ol ">成员姓名</label>
+                            <div class="col-sm-4 ">
+                                <input type="text" class="form-control1  ll" id="name1input">
+                            </div>
+                            <label for="phone1input" class="col-sm-2 control-label   top5 right ol">联系电话</label>
+                            <div class="col-sm-4 ">
+                                <input type="text" class="form-control1   ll" id="phone1input">
+                            </div>
+
+                        </div>
+
+                        <div class="form-group  ">
+                            <label for="name2input" class="col-sm-2 control-label   top5 right ol">成员姓名</label>
+                            <div class="col-sm-4 ">
+                                <input type="text" class="form-control1  ll" id="name2input">
+                            </div>
+                            <label for="phone2input" class="col-sm-2 control-label  top5 right ol">联系电话</label>
+                            <div class="col-sm-4 ">
+                                <input type="text" class="form-control1  ll" id="phone2input">
+                            </div>
+
+                        </div>
+                        <div class="form-group  ">
+                            <label for="name3input" class="col-sm-2 control-label top5 right ol top15  old">成员姓名</label>
+                            <div class="col-sm-4 ">
+                                <input type="text" class="form-control1  ll top15" id="name3input">
+                            </div>
+                            <label for="phone3input" class="col-sm-2 control-label top15  top5 right ol old">联系电话</label>
+                            <div class="col-sm-4 ">
+                                <input type="text" class="form-control1  ll top15" id="phone3input">
+                            </div>
+
+                        </div>
+
+
+                    </form>
+                </div>
+                <div class="modal-footer top30">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="xinZeng">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--查看模态-->
+    <div class="modal fade" id="chaKanModal" tabindex="-1" role="dialog" aria-labelledby="chaKanModalLabel">
+        <div class="modal-dialog " role="document ">
+            <div class="modal-content ">
+                <div class="modal-header ">
+                    <button type="button " class="close " data-dismiss="modal " aria-label="Close "><span aria-hidden="true ">&times;</span></button>
+                    <h4 class="modal-title " id="chaKanModalLabel1 top5 ">查看信息</h4>
+                </div>
+                <div class="modal-body ">
+                    <form action="/form/ " method="post " class="form-horizontal " id="chaKanBiaoDan ">
+
+                        <div class="form-group ">
+                            <label for="bianHaoinput1 " class="col-sm-2 control-label top5 right ">部门编号</label>
+                            <div class="col-sm-4 ">
+                                <input type="text " class="form-control1 " id="bianHaoinput1 " disabled>
+                            </div>
+                            <label for="fuZeReninput1 " class="col-sm-2 control-label right top5 ">部门负责人</label>
+                            <div class="col-sm-4 ">
+                                <input type="text " class="form-control1 " id="fuZeReninput1 " disabled>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="form-group ">
+                            <label for="lianxiPoneinput1 " class="col-sm-2 control-label right top5 ">联系电话</label>
+                            <div class="col-sm-8 ">
+                                <input type="text " class="form-control1 " id="lianxiPoneinput1 " disabled>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group topF20 ">
+                            <label for="minCheninput1 " class="col-sm-2 control-label top5 right ">部门名称</label>
+                            <div class="col-sm-8 ">
+                                <input type="text " class="form-control1 " id="minCheninput1 " disabled>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="form-group topF20 ">
+                            <label for="buMenMiaoShu1 " class="col-sm-2 control-label right ">部门描述</label>
+                            <div class="col-sm-8 ">
+                                <textarea id="buMenMiaoShu1 " cols="50 " rows="4 " class="form-control1 " disabled></textarea></div>
+                        </div>
+
+                        <div class="form-group ">
+                            <label for="renShuinput1 " class="col-sm-2 control-label topF right ">部门人数</label>
+                            <div class="col-sm-8 topF ">
+                                <input type="text " class="form-control1 top5 " id="renShuinput1 " disabled>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group ">
+                            <label for="beiZhu1 " class="col-sm-2 control-label right ">备注</label>
+                            <div class="col-sm-8 ">
+                                <textarea id="beiZhu1 " cols="50 " rows="4 " class="form-control1 " disabled></textarea></div>
+                        </div>
+
+
+                        <div class="form-group ">
+                            <label for="name1input1 " class="col-sm-2 control-label right ">成员姓名</label>
+                            <div class="col-sm-4 ">
+                                <input type="text " class="form-control1 " id="name1input1 " disabled>
+                            </div>
+                            <label for="phone1input1 " class="col-sm-2 control-label right ">联系电话</label>
+                            <div class="col-sm-4 ">
+                                <input type="text " class="form-control1 " id="phone1input1 " disabled>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group ">
+                            <label for="name2input1 " class="col-sm-2 control-label top10 right ">成员姓名</label>
+                            <div class="col-sm-4 topF ">
+                                <input type="text " class="form-control1 top10 " id="name2input1 " disabled>
+                            </div>
+                            <label for="phone2input1 " class="col-sm-2 control-label top10 right ">联系电话</label>
+                            <div class="col-sm-4 topF ">
+                                <input type="text " class="form-control1 top10 " id="phone2input1 " disabled>
+                            </div>
+
+                        </div>
+                        <div class="form-group ">
+                            <label for="name3input1 " class="col-sm-2 control-label top10 right ">成员姓名</label>
+                            <div class="col-sm-4 topF ">
+                                <input type="text " class="form-control1 top10 " id="name3input1 " disabled>
+                            </div>
+                            <label for="phone3input1 " class="col-sm-2 control-label top10 right ">联系电话</label>
+                            <div class="col-sm-4 topF ">
+                                <input type="text " class="form-control1 top10 " id="phone3input1 " disabled>
+                            </div>
+
+                        </div>
+
+
+                    </form>
+                </div>
+                <div class="modal-footer ">
+                    <button type="button " class="btn btn-default " data-dismiss="modal ">关闭</button>
+                    <button type="button " class="btn btn-primary " id="chaKan ">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--修改模态-->
+    <div class="modal fade " id="xiuGaiModal " tabindex="-1 " role="dialog " aria-labelledby="xiuGaiModalLabel ">
+        <div class="modal-dialog " role="document ">
+            <div class="modal-content ">
+                <div class="modal-header ">
+                    <button type="button " class="close " data-dismiss="modal " aria-label="Close "><span aria-hidden="true ">&times;</span></button>
+                    <h4 class="modal-title " id="xiuGaiModalLabel top5 ">修改信息</h4>
+                </div>
+                <div class="modal-body ">
+                    <form action="/form/ " method="post " class="form-horizontal " id="BiaoDan ">
+
+                        <div class="form-group ">
+                            <label for="bianHaoinput2 " class="col-sm-2 control-label top5 right ">部门编号</label>
+                            <div class="col-sm-4 ">
+                                <input type="text " class="form-control1 " id="bianHaoinput2 " disabled>
+                            </div>
+                            <label for="fuZeReninput2 " class="col-sm-2 control-label right top5 ">部门负责人</label>
+                            <div class="col-sm-4 ">
+                                <input type="text " class="form-control1 " id="fuZeReninput2 ">
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="form-group ">
+                            <label for="lianxiPoneinput2 " class="col-sm-2 control-label right top5 ">联系电话</label>
+                            <div class="col-sm-8 ">
+                                <input type="text " class="form-control1 " id="lianxiPoneinput2 ">
+                            </div>
+
+                        </div>
+
+                        <div class="form-group topF20 ">
+                            <label for="minCheninput2 " class="col-sm-2 control-label top5 right ">部门名称</label>
+                            <div class="col-sm-8 ">
+                                <input type="text " class="form-control1 " id="minCheninput2 ">
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="form-group topF20 ">
+                            <label for="buMenMiaoShu2 " class="col-sm-2 control-label right ">部门描述</label>
+                            <div class="col-sm-8 ">
+                                <textarea id="buMenMiaoShu2 " cols="50 " rows="4 " class="form-control1 "></textarea></div>
+                        </div>
+
+                        <div class="form-group ">
+                            <label for="renShuinput2 " class="col-sm-2 control-label topF right ">部门人数</label>
+                            <div class="col-sm-8 topF ">
+                                <input type="text " class="form-control1 " id="renShuinput2 ">
+                            </div>
+
+                        </div>
+
+                        <div class="form-group ">
+                            <label for="beiZhu2 " class="col-sm-2 control-label right ">备注</label>
+                            <div class="col-sm-8 ">
+                                <textarea id="beiZhu2 " cols="50 " rows="4 " class="form-control1 "></textarea></div>
+                        </div>
+
+
+                        <div class="form-group ">
+                            <label for="name1input2 " class="col-sm-2 control-label top5 right ">成员姓名</label>
+                            <div class="col-sm-4 ">
+                                <input type="text " class="form-control1 " id="name1input2 ">
+                            </div>
+                            <label for="phone1input2 " class="col-sm-2 control-label top5 right ">联系电话</label>
+                            <div class="col-sm-4 ">
+                                <input type="text " class="form-control1 " id="phone1input2 ">
+                            </div>
+
+                        </div>
+
+                        <div class="form-group ">
+                            <label for="name2input2 " class="col-sm-2 control-label top5 right ">成员姓名</label>
+                            <div class="col-sm-4 topF ">
+                                <input type="text " class="form-control1 top10 " id="name2input2 ">
+                            </div>
+                            <label for="phone2input2 " class="col-sm-2 control-label top5 right ">联系电话</label>
+                            <div class="col-sm-4 topF ">
+                                <input type="text " class="form-control1 top10 " id="phone2input2 ">
+                            </div>
+
+                        </div>
+                        <div class="form-group ">
+                            <label for="name3input2 " class="col-sm-2 control-label top5 right ">成员姓名</label>
+                            <div class="col-sm-4 topF ">
+                                <input type="text " class="form-control1 top10 " id="name3input2 ">
+                            </div>
+                            <label for="phone3input2 " class="col-sm-2 control-label top5 right ">联系电话</label>
+                            <div class="col-sm-4 topF ">
+                                <input type="text " class="form-control1 top10 " id="phone3input2 ">
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer ">
+                    <button type="button " class="btn btn-default " data-dismiss="modal ">关闭</button>
+                    <button type="button " class="btn btn-primary " id="xiuGai ">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</form>
+<script src="js/Bootstrap/jquery.min.js "></script>
+<script src="js/Bootstrap/bootstrap.min.js "></script>
+<script src="data.js "></script>
+<script src="managment.js "></script>
+
+</html>

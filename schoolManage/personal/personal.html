@@ -1,0 +1,211 @@
+<link rel="stylesheet" href="css/personal/personal.css">
+<script src="js/personal/personal.js"></script>
+
+<div id="tab" >
+    <h1 class="tab_title">个人中心</h1>
+    <ul class="tab_menu">
+        <li class="selected" id="tab_info">基本信息</li>
+        <li>修改信息</li>
+        <li>修改密码</li>
+    </ul>
+    <div class="tab_box">
+        <!--基本信息-->
+        <div class="bg1">
+            <div class="modifyInfo">
+                <div class="row">
+                    <div class="modifyInfo_img">
+                        <img src="images/logo.png" alt="" class="userImg">
+                    </div>
+                    <div class="modifyInfo_name">
+                        <div>登录名：<span class="userName"></span></div>
+                        <div>您好！ <span class="userDuty"></span></div>
+                    </div>
+                </div>
+                <div class="modifyInfo_title col-md-12 col-xs-12">个人信息</div>
+                <form action="#">
+                    <div class="modifyInfo_box row">
+                        <div class="col-md-12 col-md-offset-1 col-xs-offset-0">
+                            <div class="row height40">
+                                <span class="col-md-2 col-xs-6 right">姓名：</span>
+                                <input type="text" class="userName col-md-3 col-xs-6" readonly="readonly">
+                                <span class="col-md-2 col-xs-6 right">ID：</span>
+                                <input type="text" class="userId col-md-3 col-xs-6" readonly="readonly">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-md-offset-1 col-xs-offset-0">
+                            <div class="row height40">
+                                <span class="col-md-2 col-xs-6 right">性别：</span>
+                                <input type="text" class="userSex col-md-3 col-xs-6" readonly="readonly">
+<!--                                <span class="userSex col-md-2 col-xs-12 col-sm-6" style="text-align: left"></span>-->
+                                <span class="col-md-2 col-xs-6 right">年龄：</span>
+                                <input type="text" class="userAge col-md-3 col-xs-6" readonly="readonly">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-md-offset-1 col-xs-offset-0">
+                            <div class="row height40">
+                                <span class="col-md-2 col-xs-6 right ">职位：</span>
+                                <input type="text" class="userDuty col-md-3 col-xs-6" readonly="readonly">
+                                <span class="col-md-2 col-xs-6 right">联系电话：</span>
+                                <input type="text" class="userTel col-md-3 col-xs-6" readonly="readonly">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-md-offset-1 col-xs-offset-0">
+                            <div class="row height40">
+                                <span class="col-md-2 col-xs-6 right">部门：</span>
+                                <input type="text" class="userDepName col-md-3 col-xs-6" readonly="readonly">
+                                <span class="col-md-2 col-xs-6 right">邮箱：</span>
+                                <input type="text" class="userEmail col-md-3 col-xs-6" readonly="readonly">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-md-offset-1 col-xs-offset-0">
+                            <div class="row height40">
+                                <span class="col-md-2 col-xs-6 right">状态：</span>
+                                <input type="text"  class="userState col-md-3 col-xs-6" readonly="readonly">
+                                <span class="col-md-2 col-xs-6 right">紧急联系人：</span>
+                                <input type="text" class="userFamily col-md-3 col-xs-6" readonly="readonly">
+
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-md-offset-1 col-xs-offset-0">
+                           <div class="row height40">
+                               <span class="col-md-2 col-xs-6 right">所带班级：</span>
+                               <input type="text" class="userGrade col-md-3 col-xs-6" readonly="readonly">
+                               <span class="col-md-2 col-xs-6 right">紧急联系电话：</span>
+                               <input type="text" class="userFamilyTel col-md-3 col-xs-6" readonly="readonly">
+                           </div>
+                        </div>
+                        <div class="col-md-12 col-md-offset-1 col-xs-offset-0">
+                            <div class="row height40">
+                                <span class="col-md-2 col-xs-6 right">家庭住址：</span>
+                                <input type="text" class="userAddress col-md-6 col-xs-6" readonly="readonly">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!--修改信息-->
+        <div class="bg2">
+            <div class="modifyInfo">
+                <div class="row">
+                    <div class="modifyInfo_img">
+                        <img src="images/logo.png" alt="" class="userImg">
+                    </div>
+                    <div class="modifyInfo_name">
+                        <div>登录名：<span class="userName"></span></div>
+                        <div>您好！ <span class="userDuty"></span></div>
+                    </div>
+                </div>
+                <div class="modifyInfo_title col-md-12 col-xs-12">个人信息编辑</div>
+                <form  action="personal.html">
+                    <div class="modifyInfo_box row">
+                        <div class="col-md-12 col-md-offset-1 col-xs-offset-0">
+                            <div class="row height40">
+                                <span class="col-md-2 col-xs-6 right">姓名：</span>
+                                <input type="text" class="userName gray col-md-3 col-xs-6" disabled="disabled">
+                                <span class="col-md-2 col-xs-6 right">ID：</span>
+                                <input type="text" class="userId gray col-md-3 col-xs-6" disabled="disabled">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-md-offset-1 col-xs-offset-0">
+                            <div class="row height40">
+                                <span class="col-md-2 col-xs-6 right">性别：</span>
+                                <span class="col-md-3 col-xs-6">
+                                    <div class="row">
+                                        <input type="radio" name="sex" class="col-md-1" disabled="disabled">
+                                        <span class="gray col-md-1">男</span>
+                                        <input type="radio" name="sex" disabled="disabled" class="gray col-md-1">
+                                        <span class="gray col-md-1">女</span>
+                                    </div>
+                                </span>
+                                <span class="col-md-2 col-xs-6 right">年龄：</span>
+                                <input type="text" class="userAge gray col-md-3 col-xs-6" disabled="disabled">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-md-offset-1 col-xs-offset-0">
+                            <div class="row height40">
+                                <span class="col-md-2 col-xs-6 right ">职位：</span>
+                                <input type="text" class="userDuty gray col-md-3 col-xs-6" disabled="disabled">
+                                <span class="col-md-2 col-xs-6 right">联系电话：</span>
+                                <input type="text" class="userTel col-md-3 col-xs-6" id="userTel">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-md-offset-1 col-xs-offset-0">
+                            <div class="row height40">
+                                <span class="col-md-2 col-xs-6 right">部门：</span>
+                                <input type="text" class="userDepName gray col-md-3 col-xs-6" disabled="disabled">
+                                <span class="col-md-2 col-xs-6 right">邮箱：</span>
+                                <input type="text" class="userEmail col-md-3 col-xs-6" id="userEmail">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-md-offset-1 col-xs-offset-0">
+                            <div class="row height40">
+                                <span class="col-md-2 col-xs-6 right">状态：</span>
+                                <input type="text"  class="userState gray col-md-3 col-xs-6" disabled="disabled">
+                                <span class="col-md-2 col-xs-6 right">紧急联系人：</span>
+                                <input type="text" class="userFamily col-md-3 col-xs-6" id="userFamily">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-md-offset-1 col-xs-offset-0">
+                            <div class="row height40">
+                                <span class="col-md-2 col-xs-6 right">所带班级：</span>
+                                <input type="text" class="userGrade gray col-md-3 col-xs-6" disabled="disabled">
+                                <span class="col-md-2 col-xs-6 right">紧急联系电话：</span>
+                                <input type="text" class="userFamilyTel col-md-3 col-xs-6" id="userFamilyTel">
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-md-offset-1 col-xs-offset-0">
+                            <div class="row height40">
+                                <span class="col-md-2 col-xs-6 right">家庭住址：</span>
+                                <input type="text" class="userAddress col-md-6 col-xs-6" id="userAddress">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <button class="btn btn-success" type="button" id="change">确定</button>
+                <button class="btn btn-danger cancel" type="button">取消</button>
+            </div>
+        </div>
+
+        <!--修改密码-->
+        <div class="changePsw">
+            <h2>修改密码</h2>
+            <form action="#" class="row">
+                <div class="col-md-8 col-xs-12 col-md-offset-1 col-xs-offset-0">
+                    <div class="row sBox">
+
+                        <span class="remind aHide col-md-7 col-xs-7 col-md-offset-6 col-xs-offset-5">您的原始密码错误请重新输入！</span>
+                        <span class="col-md-4 col-xs-5 col-md-offset-2 col-xs-offset-0 right">原始密码：</span>
+                        <input type="password" class="changeSubmit userPassword col-md-5 col-xs-5">
+
+                    </div>
+                </div>
+                <div class="col-md-8 col-xs-12 col-md-offset-1 col-xs-offset-0">
+                    <div class="row sBox">
+                        <span class="remind bHide col-md-7 col-xs-7 col-md-offset-6 col-xs-offset-5">请输入字符数为6-12位的密码！</span>
+                        <span class="remind cHide col-md-7 col-xs-7 col-md-offset-6 col-xs-offset-5">与原密码一致，请重新输入！</span>
+                        <span class="col-md-4 col-xs-5 col-md-offset-2 col-xs-offset-0 right">新密码：</span>
+                        <input type="password" class="changeSubmit changePassword col-md-5 col-xs-5"  id="changePassword">
+                    </div>
+                </div>
+                <div class="col-md-8 col-xs-12 col-md-offset-1 col-xs-offset-0">
+                    <div class="row sBox">
+                        <span class="remind dHide col-md-7 col-xs-7 col-md-offset-6 col-xs-offset-5">两次密码不一致，请重新输入！</span>
+                        <span class="col-md-4 col-xs-5 col-md-offset-2 col-xs-offset-0 right">确认新密码：</span>
+                        <input type="password" class="changeSubmit confirmPassword col-md-5 col-xs-5">
+                        <span class="remind eHide col-md-5 col-xs-6 col-md-offset-6 col-xs-offset-5">请重新输入！</span>
+
+                    </div>
+                </div>
+            </form>
+            <div>
+                <button class="btn btn-success" type="button" id="changePsw">确定</button>
+                <button class="btn btn-danger cancel1" type="button" >取消</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,117 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="zh">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>火箭班</title>-->
+<link rel="stylesheet" type="text/css" href="../css/normalize.css">
+<!--CSS RESET-->
+<link rel="stylesheet" type="text/css" href="../css/htmleaf-demo.css">
+<!--演示页面样式，使用时可以不引用-->
+<link href="../../css/Bootstrap/bootstrap.min.css" rel='stylesheet' type='text/css' />
+<link href="../../css/Bootstrap/style.css" rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="../../css/index.css">
+<link rel="stylesheet" href="../css/style.css">
+<script src="../../js/Bootstrap/jquery.min.js"></script>
+<script src="../../js/Bootstrap/jquery.cookie.min.js"></script>
+<script src="../../js/Bootstrap/bootstrap.min.js"></script>
+<script src="../../js/lib/bootoast/index.js"></script>
+<link rel="stylesheet" href="../../js/lib/bootoast/style.css">
+<script src="../../js/lib/confirm/index.js"></script>
+<script src="../js/photoWallLink.js"></script>
+<script src='../js/flipping.web.js'></script>
+<script src="../../js/data.js"></script>
+<!--</head>-->
+<!--<body>-->
+<div id="app" data-state="0">
+    <!--增删按钮-->
+    <div class="ui-big-images">
+<!--        <div class="ui-big-image" data-key="0">-->
+<!--            <button onclick="myClear(this)" class="fixed">删除照片 ×</button>-->
+<!--            <img src="../../images/photoWall/13.jpg" alt=""/>-->
+<!--        </div>-->
+<!--        <div class="ui-big-image" data-key="1">-->
+<!--            <button onclick="myClear(this)" class="fixed">删除照片 ×</button>-->
+<!--            <img src="../../images/photoWall/14.jpg" alt=""/>-->
+<!--        </div>-->
+<!--        <div class="ui-big-image" data-key="2">-->
+<!--            <button onclick="myClear(this)" class="fixed">删除照片 ×</button>-->
+<!--            <img src="../../images/photoWall/15.jpg" alt=""/>-->
+<!--        </div>-->
+<!--        <div class="ui-big-image" data-key="3">-->
+<!--            <button onclick="myClear(this)" class="fixed">删除照片 ×</button>-->
+<!--            <img src="../../images/photoWall/16.jpg" alt=""/>-->
+<!--        </div>-->
+<!--        <div class="ui-big-image" data-key="4">-->
+<!--            <button onclick="myClear(this)" class="fixed">删除照片 ×</button>-->
+<!--            <img src="../../images/photoWall/17.jpg" alt=""/>-->
+<!--        </div>-->
+<!--        <div class="ui-big-image" data-key="5">-->
+<!--            <button onclick="myClear(this)" class="fixed">删除照片 ×</button>-->
+<!--            <img src="../../images/photoWall/18.jpg" alt=""/>-->
+<!--        </div>-->
+    </div>
+
+    <div class="ui-thumbnails">
+<!--        <div class="ui-thumbnail small" tabindex="-1" data-key="0">-->
+<!--            <img src="../../images/photoWall/19.jpg" alt="" />-->
+<!--            <div class="ui-cuticle" data-flip-key="cuticle"></div>-->
+<!--        </div>-->
+<!--        <div class="ui-thumbnail small" tabindex="-1" data-key="1">-->
+<!--            <img src="../../images/photoWall/20.jpg" alt="" />-->
+<!--            <div class="ui-cuticle" data-flip-key="cuticle"></div>-->
+<!--        </div>-->
+<!--        <div class="ui-thumbnail small" tabindex="-1" data-key="2">-->
+<!--            <img src="../../images/photoWall/21.jpg" alt="" />-->
+<!--            <div class="ui-cuticle" data-flip-key="cuticle"></div>-->
+<!--        </div>-->
+<!--        <div class="ui-thumbnail small" tabindex="-1" data-key="3">-->
+<!--            <img src="../../images/photoWall/22.jpg" alt=""/>-->
+<!--            <div class="ui-cuticle" data-flip-key="cuticle"></div>-->
+<!--        </div>-->
+<!--        <div class="ui-thumbnail small" tabindex="-1" data-key="4">-->
+<!--            <img src="../../images/photoWall/23.jpg" alt="" />-->
+<!--            <div class="ui-cuticle" data-flip-key="cuticle"></div>-->
+<!--        </div>-->
+<!--        <div class="ui-thumbnail small" tabindex="-1" data-key="5">-->
+<!--            <img src="../../images/photoWall/24.jpg" alt="" />-->
+<!--            <div class="ui-cuticle" data-flip-key="cuticle"></div>-->
+<!--        </div>-->
+    </div>
+    <div class="ui-content">
+        <nav class="ui-nav">
+            <button id="prev" tabindex="-1" title="Previous">&lt;</button>
+            <button id="next" tabindex="-1" title="Next">&gt;</button>
+        </nav>
+
+        <div class="ui-articles txt">
+<!--            <article class="ui-article" data-key="0">-->
+<!--                <h2 class="ui-heading">体育课</h2>-->
+<!--                <p class="ui-paragraph">火箭班集合上体育课啦！开心剪刀手</p>-->
+<!--            </article>-->
+<!--            <article class="ui-article" data-key="1">-->
+<!--                <h2 class="ui-heading">自然课</h2>-->
+<!--                <p class="ui-paragraph">培养观察力，从一片叶子的脉络、颜色、形状开始 </p>-->
+<!--            </article>-->
+<!--            <article class="ui-article" data-key="2">-->
+<!--                <h2 class="ui-heading">书画节</h2>-->
+<!--                <p class="ui-paragraph">打开长长的画卷，跟爸爸妈妈一起挥洒想象力、构建五彩世界</p>-->
+<!--            </article>-->
+<!--            <article class="ui-article" data-key="3">-->
+<!--                <h2 class="ui-heading">上学路上</h2>-->
+<!--                <p class="ui-paragraph">童年的快乐在6月的风里，在清晨的阳光下，在每天上学的石板路上</p>-->
+<!--            </article>-->
+<!--            <article class="ui-article" data-key="4">-->
+<!--                <h2 class="ui-heading">运动会</h2>-->
+<!--                <p class="ui-paragraph">年纪小小，能量满满。妈妈陪我来运动</p>-->
+<!--            </article>-->
+<!--            <article class="ui-article" data-key="5">-->
+<!--                <h2 class="ui-heading">课外拓展</h2>-->
+<!--                <p class="ui-paragraph">火箭班课外拓展课，你追我赶、配合无间。</p>-->
+<!--            </article>-->
+        </div>
+    </div>
+</div>
+
+    <script src="../js/huoJian.js"></script>

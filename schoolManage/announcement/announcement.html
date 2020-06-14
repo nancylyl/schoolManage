@@ -1,0 +1,88 @@
+<link rel="stylesheet" href="css/announcement/announcement.css">
+<script src="js/announcement/announcement.js"></script>
+
+
+<form action="">
+    <div class="col-md-12 graphs">
+        <!-- Input Group -->
+        <div class="bs-example4" data-example-id="contextual-table">
+            <h2 class="tb-title">公告管理</h2>
+            <div class="list-search">
+                <div class="input-group ">
+                    <input type="text" name="search" class="form-control1 " id="input-search" placeholder="搜索...">
+                    <span class="aHide">搜索内容不能为空，请输入！</span>
+                    <span>
+                        <button class="btn btn-success" type="button" id="search"><i class="fa fa-search"></i></button>
+                    </span>
+                </div>
+            </div>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>标题</th>
+                    <th>发布者</th>
+                    <th>发布时间</th>
+                    <th>管理</th>
+                </tr>
+                </thead>
+                <tbody id="tb-bulletin">
+                </tbody>
+            </table>
+            <div class="row">
+                <div class="col-md-offset-4 col-lg-offset-4col-xl-offset-4">
+                    <nav>
+                        <ul class="pagination pagination-lg">
+                            <li><a href="javascipt:;" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                            <li><a href="javascipt:;">1</a></li>
+                            <li><a href="javascipt:;">2</a></li>
+                            <li><a href="javascipt:;">3</a></li>
+                            <li><a href="javascipt:;">4</a></li>
+                            <li><a href="javascipt:;">5</a></li>
+                            <li><a href="javascipt:;" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</form>
+
+
+<!----------------------------- 查看公告      弹出模态框 ------------------------------>
+<div class="modal fade" id="lookBulletin" tabindex="-1" role="dialog" aria-labelledby="lookBulletin" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h2 class="modal-title"><span class="changeClass"></span>公告</h2>
+            </div>
+            <div class="modal-body">
+                <h4 class="bulletin_title"></h4>
+                <div class="bulletin_detail">
+                   <span>
+                       <span class="glyphicon glyphicon-user"></span>
+                       <span class="bulletinAuthor"></span>
+                   </span>
+                    <span class="bulletinTime"></span>
+                </div>
+                <div class="textarea">
+                    <textarea class="bulletinContent"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" name="submit" class=" btn btn-primary" id="withdrawBulletin">退出</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+</div>
+
+
+
+
+
+
+

@@ -1,0 +1,60 @@
+tr td{
+    text-align: center;
+}
+th{
+    text-align: center;
+}
+.addBan {
+    padding-left: 47px;
+}
+.footerYe{
+    margin-left: 35%;
+    margin-top: -18px;
+}
+.adBan{
+    background-color: #246AA6;
+    height: 40px;
+}
+.adBan1 {
+    background-color: #246AA6;
+    height: 40px;
+}
+.myHead {
+    margin-top: 10px;
+}
+.biao {
+    margin-top: -15px;
+}
+.detailStu {
+    display: none;
+}
+.fanhui {
+    display: none;
+    //background-color: rgb(245,245,245);
+    //background-color: #f5f5f5;
+}
+.hangcolor {
+    //background-color: #dff0d8!important;
+}
+.banTbody .active {
+    //background-color: #dff0d8;
+}
+.tishiyu,.nameAgain {
+    display: none;
+    font-size: 14px;
+    color:red;
+    margin-left: 15px;
+}
+.yourClass {
+    width: 17%;
+    margin-left: 31px;
+}
+.souS {
+    margin-left: 1px;
+}
+.deleteBan {
+    background-color:#D9534F!important;
+}
+.redse {
+    background-color: #D9534F!important;
+}

@@ -1,0 +1,17 @@
+{
+    "name": "SCHOOLMANAGE",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node ./bin/www",
+        "debug": "nodemon --inspect ./bin/www"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "font-awesome": "^4.7.0",
+        "fonts": "0.0.2"
+    }
+}

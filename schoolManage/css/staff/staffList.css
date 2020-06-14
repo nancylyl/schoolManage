@@ -1,0 +1,13 @@
+body,
+htm {
+    margin: 0;
+}
+
+.studentList {
+    background-color: red;
+    height: 200px;
+}
+
+.main-content {
+    min-height: 557px;
+}

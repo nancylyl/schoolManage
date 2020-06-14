@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>照片</title>
+    <link rel="stylesheet" href="../../css/photoWall/photoWall.css">
+</head>
+<body style="background-image: url('../../images/photoWall/back2.jpg')">
+<!--上传照片-->
+<div class="fileBox">
+    <!--第一张图-->
+    <div class="inputBox">
+        <i class="close hide" id="close1"></i>
+        <input type="file" name="pic" class="fileInput" id="pic1" accept="image/gif,image/jpg,image/png,text/*" onChange="inputChange('pic1','inputImg1','add1','close1')" />
+        <img src="" alt="" id="inputImg1" class="baseImg hide"/>
+        <div class="jia" id="add1">＋</div>
+    </div>
+</div>
+<div class="fileBox second">
+    <!--第二张图-->
+    <div class="inputBox">
+        <i class="close hide" id="close2"></i>
+        <input type="file" name="pic" class="fileInput" id="pic2" accept="image/gif,image/jpg,image/png,text/*" onChange="inputChange('pic2','inputImg2','add2','close2')" />
+        <img src="" alt="" id="inputImg2" class="baseImg hide"/>
+        <div class="jia" id="add2">＋</div>
+    </div>
+</div>
+<div class="fileBox third">
+     <!--第三张图-->
+    <div class="inputBox">
+        <i class="close hide" id="close3"></i>
+        <input type="file" name="pic" class="fileInput" id="pic3" accept="image/gif,image/jpg,image/png,text/*" onChange="inputChange('pic3','inputImg3','add3','close3')" />
+        <img src="" alt="" id="inputImg3" class="baseImg hide"/>
+        <div class="jia" id="add3">＋</div>
+    </div>
+</div>
+
+
+
+
+
+<script src="../../js/Bootstrap/jquery.min.js"></script>
+<script src="../../js/photoWall/photoWall.js"></script>
+</body>
+</html>

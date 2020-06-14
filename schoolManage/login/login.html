@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Modern Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+    Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript">
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <link rel="icon" href="data:image/ico;base64,aWNv">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/Bootstrap/bootstrap.min.css" rel='stylesheet' type='text/css' />
+    <!-- Custom CSS -->
+    <link href="../css/login/style.css" rel='stylesheet' type='text/css' />
+    <link href="../css/Bootstrap/font-awesome.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="../js/Bootstrap/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/Bootstrap/bootstrap.min.js"></script>
+</head>
+
+<body id="login">
+    <div class="login-logo">
+        <img src="../images/logo.png" alt="" />
+    </div>
+    <h1 class="form-heading">登&nbsp;&nbsp;&nbsp;&nbsp;录</h1>
+    <div class="app-cam">
+        <form action="#" id="myFormId">
+            <span class="prompt">账号或密码错误,请重新输入！</span>
+            <!--            <span class="prompt1">账号不能为空，请重新输入！</span>-->
+            <input type="text" id="user" class="text" value="请输入账号或手机号" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入账号或手机号';}">
+            <input type="password" id="password" value="请输入密码" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入密码';}">
+            <div class="submit"><input type="submit" onclick="myLogin()" value="登录"></div>
+            <ul class="new">
+                <li class="new_right">
+                    <p class="sign"><a href="#">忘记密码 ?</a></p>
+                </li>
+            </ul>
+        </form>
+    </div>
+    <p class="copy_layout login">Copyright © 2020 百杰 223 2组 All rights reserved.
+        <a target="_blank" href="">2组</a>
+    </p>
+    <div class="screenbg">
+        <ul>
+            <li>
+                <a href="javascript:;"><img src="../images/login/1.png"></a>
+            </li>
+            <li>
+                <a href="javascript:;"><img src="../images/login/2.jpg"></a>
+            </li>
+            <li>
+                <a href="javascript:;"><img src="../images/login/3.jpg"></a>
+            </li>
+        </ul>
+    </div>
+    <script src="../js/data.js"></script>
+    <script src="../js/login/login.js"></script>
+</body>
+
+</html>

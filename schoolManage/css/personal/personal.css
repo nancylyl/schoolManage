@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul, li {
+    list-style:none
+}
+@media(min-width: 768px) {
+    *{
+        font-size: 15px;
+    }
+    .modifyInfo_title{
+        font-size: 25px;
+    }
+    .modifyInfo_img img{
+        height: 70px;
+    }
+    .modifyInfo_name div:nth-child(2){
+        margin-top: 22px;
+    }
+    .remind{
+        font-size: 12px;
+    }
+    .changePsw h2{
+        margin: 0 auto 30px;
+        height: 60px;
+        line-height: 60px;
+        width: 90%;
+        border-bottom: 1.3px solid rgba(48, 108, 110, 0.64);
+    }
+
+}
+@media screen and (max-width: 767px) {
+    *{
+        font-size: 12px;
+    }
+    .modifyInfo_title{
+        font-size: 18px;
+    }
+    .remind{
+        transform: scale(.9)!important;
+    }
+    .modifyInfo_img img{
+        height: 50px;
+    }
+    .modifyInfo_name div:nth-child(2){
+        margin-top: 15px;
+    }
+    .changePsw h2{
+        margin: 0 auto 20px;
+        height: 40px;
+        line-height: 40px;
+        width: 90%;
+        border-bottom: 1.3px solid rgba(48, 108, 110, 0.64);
+        font-size: 20px;
+    }
+}
+#tab {
+    background-image: url("../../images/bg5.jpg");
+    position:relative;
+    text-align:center;
+    padding:1px;
+}
+.tab_title{
+    height: 70px;
+    width: 90%;
+    margin: 0 auto;
+    line-height: 70px;
+    text-align: left;
+}
+#tab .tab_menu {
+    z-index:1;
+    height: 60px;
+    line-height: 80px;
+    border-bottom: 2px solid #fff;
+    width: 90%;
+    margin: 0 auto 20px;
+}
+.tab_menu li {
+    float:left;
+    width:120px;
+    height:40px;
+    line-height:40px;
+    cursor:pointer;
+    text-align:center;
+    margin:0 1px 0 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #000;
+    filter:alpha(opacity:80);
+    opacity:0.8;
+    border-radius: 5px;
+}
+#tab .tab_menu .selected{
+    cursor:pointer;
+    background-color: rgba(48, 108, 110, 0.78);
+    color: white;
+    font-size:16px;
+    filter:alpha(opacity:80);
+    opacity:0.8;
+}
+.bg1 input{
+    border:none;
+}
+#tab .bg1,
+#tab .bg2{
+    padding: 0 100px 20px;
+}
+.modifyInfo{
+    box-shadow:-20px 30px 10px 0 rgba(0, 0, 0, 0.41);
+    background-color: white;
+    padding: 20px;
+}
+.modifyInfo_img,
+.modifyInfo_name
+{
+    margin-right: 20px;
+    float: left;
+    text-align: left;
+    height: 70px;
+}
+
+.modifyInfo_title{
+    margin: 10px 0 20px 0;
+    text-align: left;
+    height: 50px;
+    line-height: 50px;
+    border-top: 1.3px solid rgba(48, 108, 110, 0.64);
+    border-bottom: 1.3px solid rgba(48, 108, 110, 0.64);
+}
+
+.height40{
+    height: 40px;
+}
+.right{
+    text-align: right;
+}
+.modifyInfo_box{
+   margin: 20px 0;
+}
+.modifyInfo .gray{
+    color: #8f8f8f;
+}
+.btn-success,
+.btn-danger {
+    width: 80px;
+    height: 40px;
+    margin: 0 5px 0;
+}
+.btn-success {
+    background-color: #5CB85C;
+    border-color: #5CB85C;
+}
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active
+{
+    background-color: #449D44 !important;
+    border-color: #4cae4c !important;
+}
+.changePsw{
+    width: 60%;
+    background-color: white;
+    margin: 20px auto;
+}
+
+.changePsw .sBox{
+    height: 70px;
+    position: relative;
+}
+input{
+    padding: 0!important;
+}
+.changePsw button{
+    margin: 30px 5px;
+}
+.changePsw,
+.bg2{
+    display:none;
+}
+.remind{
+    color: #b80a0d;
+    text-align: left;
+    padding: 0;
+}
+.eHide {
+    position: absolute;
+    left: 0;
+    bottom: 25px;
+    display: none;
+}
+.aHide,
+.bHide,
+.cHide,
+.dHide{
+    position: absolute;
+    left: 0;
+    bottom: 70px;
+    display: none;
+}
+

@@ -1,0 +1,24 @@
+<link href="../../css/Bootstrap/bootstrap.min.css" rel='stylesheet' type='text/css' />
+<link href="../../css/Bootstrap/style.css" rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="../../css/index.css">
+<script src="../../js/Bootstrap/jquery.min.js"></script>
+<script src="../../js/Bootstrap/jquery.cookie.min.js"></script>
+<script src="../../js/Bootstrap/bootstrap.min.js"></script>
+<script src="../../js/lib/bootoast/index.js"></script>
+<link rel="stylesheet" href="../../js/lib/bootoast/style.css">
+<script src="../../js/lib/confirm/index.js"></script>
+
+<script>
+    $(function() {
+        $.confirm({
+            text: "您确定要" + name + "吗?",
+            confirmButton: "确定",
+            cancelButton: "取消",
+            confirm: function() {
+                alert("dsdfs");
+
+            },
+            dialogClass: 'confirm-dialog'
+        });
+    })
+</script>

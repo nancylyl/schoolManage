@@ -1,0 +1,221 @@
+<link href="css/staff/staffList.css" rel="stylesheet">
+<script src="js/attendance/attendance.js"></script>
+<form action="">
+    <div class="col-md-12 graphs">
+
+        <!-- Input Group -->
+        <div class="bs-example4" data-example-id="contextual-table">
+            <h3 class="tb-title">员工当前出勤信息</h3>
+            <div class="list-search">
+                <form action="#" method="GET">
+                    <div class="col-sm-2 clearpadding">
+                        <select name="SearchDepName" id="SearchDepName" class="form-control1">
+                            <option value="0">请选择部门</option>
+                            <option value="行政部">行政部</option>
+                            <option value="后勤部">后勤部</option>
+                            <option value="教学部">教学部</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-2">
+                        <select name="SearchGrade" id="SearchGrade" class="form-control1">
+                            <option value="0">请选择职位</option>
+                            <option value="行政园长">行政园长</option>
+                            <option value="教学园长">教学园长</option>
+                            <option value="主任教师">主任教师</option>
+                            <option value="辅助教师">辅助教师</option>
+                            <option value="出纳">出纳</option>
+                            <option value="会计">会计</option>
+                            <option value="后勤主管">后勤主管</option>
+                            <option value="园医主管">园医主管</option>
+                            <option value="园医医生">园医医生</option>
+                            <option value="班车司机">班车司机</option>
+                            <option value="食堂主管">食堂主管</option>
+                            <option value="食堂厨师">食堂厨师</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-2 clearpadding">
+                        <select name="SearchState" id="SearchState" class="form-control1">
+                            <option value="0">请选择考勤状态</option>
+                            <option value="正常">正常</option>
+                            <option value="迟到">迟到</option>
+                            <option value="早退">早退</option>
+                            <option value="缺勤">缺勤</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="input-group ">
+                            <input type="text" id="SearchName" name="SearchName" class="form-control1 input-search " placeholder="员工编号/姓名...">
+                            <span class="input-group-btn">
+                        <button class="btn btn-success" id="btnSearch" type="button"><i class="fa fa-search"></i></button>
+                        </span>
+                        </div>
+                    </div>
+                    <!-- Input Group -->
+                </form>
+            </div>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>员工编号</th>
+                    <th>姓名</th>
+                    <th>上班打卡</th>
+                    <th>下班打卡</th>
+                    <th>出勤状态</th>
+                    <th>所属部门</th>
+                    <th>所在职位</th>
+                    <th>管理班级</th>
+                    <th>联系电话</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody id="tb-student">
+                </tbody>
+
+            </table>
+            <div class="row">
+                <div class="col-md-offset-4 col-lg-offset-4col-xl-offset-4">
+                    <nav>
+                        <ul class="pagination pagination-lg">
+                            <li><a href="javascipt:;" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                            <li><a href="javascipt:;">1</a></li>
+                            <li><a href="javascipt:;">2</a></li>
+                            <li><a href="javascipt:;">3</a></li>
+                            <li><a href="javascipt:;">4</a></li>
+                            <li><a href="javascipt:;">5</a></li>
+                            <li><a href="javascipt:;" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+</form>
+
+<!--查看功能模态框-->
+<div class="modal fade" id="checkStudent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h2 class="modal-title">查看员工</h2>
+            </div>
+
+            <div class="modal-body">
+
+                <form id="addStudentForm" class="form-horizontal" method="post" action="management.html.html">
+
+                    <div class="form-group">
+                        <label for="smallinput" class="col-sm-3 control-label label-input-sm">员工编号</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="Id" class="form-control1 input-sm" id="smallinput" readonly="true">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="smallinput" class="col-sm-3 control-label label-input-sm">员工姓名</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="Name" class="form-control1 input-sm" id="smallinput" readonly="true">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="smallinput" class="col-sm-3 control-label label-input-sm">员工年龄</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="Age" class="form-control1 input-sm" id="smallinput" readonly="true">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="selector1" class="col-sm-3 control-label">性别</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="Sex" class="form-control1 input-sm" id="smallinput" readonly="true">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="selector3" class="col-sm-3 control-label">出生日期</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="Birthday" class="form-control1 input-sm" id="smallinput" readonly="true">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="selector2" class="col-sm-3 control-label">所属部门</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="DepName" class="form-control1 input-sm" id="smallinput" readonly="true">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="selector2" class="col-sm-3 control-label">所在职位</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="Duty" class="form-control1 input-sm" id="smallinput" readonly="true">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="selector2" class="col-sm-3 control-label">管理班级</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="Grade" class="form-control1 input-sm" id="smallinput" readonly="true">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="selector3" class="col-sm-3 control-label">联系电话</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="Tel" class="form-control1 input-sm" id="smallinput" readonly="true">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="selector3" class="col-sm-3 control-label">电子邮箱</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="Email" class="form-control1 input-sm" id="smallinput" readonly="true">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="selector3" class="col-sm-3 control-label">家庭住址</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="Addr" class="form-control1 input-sm" id="smallinput" readonly="true">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="selector3" class="col-sm-3 control-label">紧急联系人</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="EContact" class="form-control1 input-sm" id="smallinput" readonly="true">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="selector3" class="col-sm-3 control-label">紧急联系人电话</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="ETel" class="form-control1 input-sm" id="smallinput" readonly="true">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="selector3" class="col-sm-3 control-label">登录密码</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="PassWord" class="form-control1 input-sm" id="smallinput" readonly="true">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="selector2" class="col-sm-3 control-label">状态</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="State" class="form-control1 input-sm" id="smallinput" readonly="true">
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+</div>

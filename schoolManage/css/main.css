@@ -1,0 +1,26 @@
+.tb-title-stu {
+  line-height: 80px;
+}
+
+.chat {
+  overflow: hidden;
+}
+
+.chartdes {
+  color: red;
+  margin: 10px;
+  text-align: center;
+}
+
+.tr-gonggao {
+  margin-top: 0;
+}
+
+.tb-guanggao {
+  overflow: hidden;
+}
+
+.tb-guanggao .tb-announcement {
+  transition: all .3s;
+  margin-top: 0;
+}

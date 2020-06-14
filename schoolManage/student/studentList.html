@@ -1,0 +1,259 @@
+<link href="css/student/studentList.css" rel="stylesheet">
+<script src="js/student/student.js"></script>
+<div class="col-md-12 graphs">
+    <!-- Input Group -->
+    <div class="bs-example4" data-example-id="contextual-table">
+        <h3 class="tb-title">学生管理信息</h3>
+        <!-- 查询开始 -->
+        <div class="list-search" id="fitlerForm">
+            <form onsubmit="return false">
+                <div class="col-sm-2 clearpadding">
+                    <select name="SearchGrade" id="SearchGrade" class="form-control1">
+                            <option value="0">请选择年级</option>
+                        </select>
+                </div>
+                <div class="col-sm-2">
+                    <select name="SearchClassTypeName" id="SearchClassTypeName" class="form-control1">
+                            <option value="0">请选择班</option>
+                        </select>
+                </div>
+                <div class="col-sm-2 clearpadding">
+                    <select name="SearchStateName" id="SearchStateName" class="form-control1">
+                            <option value="正常" selected>正常</option>
+                            <option value="退学">退学</option>
+                            <option value="删除">删除</option>
+                        </select>
+                </div>
+                <div class="col-sm-4">
+                    <div class="input-group ">
+                        <input type="text" id="searchName" name="searchName" class="form-control1 input-search " placeholder="学生姓名/联系人/班级...">
+                        <span class="input-group-btn">
+                        <button class="btn btn-success" id="btnSearch" type="button"><i class="fa fa-search"></i></button>
+                        <button type="button" class="btn btn-primary  add-Btn" id="addStudentBtn">添加学生 </button>
+                        <button type="button" class="btn btn-primary  add-Btn  " id="export">导出 </button>
+                        </span>
+                    </div>
+                </div>
+                <!-- Input Group -->
+            </form>
+        </div>
+        <!-- 查询结束 -->
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>出生日期</th>
+                    <th>所属班级</th>
+                    <th>班级名称</th>
+                    <th>紧急联系人</th>
+                    <th>紧急联系电话</th>
+                    <th>到校时间</th>
+                    <th>状态</th>
+                    <th width="200">
+                        <div style="width: 200px">操作</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="tb-student">
+            </tbody>
+
+        </table>
+        <div class="row">
+            <div class="col-md-offset-4 col-lg-offset-4col-xl-offset-4">
+                <nav>
+                    <ul class="pagination pagination-lg">
+                        <li><a href="javascipt:;" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                        <li><a href="javascipt:;">1</a></li>
+                        <li><a href="javascipt:;">2</a></li>
+                        <li><a href="javascipt:;">3</a></li>
+                        <li><a href="javascipt:;">4</a></li>
+                        <li><a href="javascipt:;">5</a></li>
+                        <li><a href="javascipt:;" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+<!-- 增加修改开始         弹出模态框   ------------------------------------------------>
+<div class="modal fade" id="editStudent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h2 class="modal-title" id="editTile">新增学生</h2>
+            </div>
+
+            <div class="modal-body">
+
+                <form id="addStudentForm" class="form-horizontal" method="post" action="studentList.html">
+
+                    <div class="form-group">
+                        <label for="smallinput" class="col-sm-3 control-label label-input-sm">姓名</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="Name" class="form-control1 input-sm" id="smallinput" placeholder="姓名">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="selector1" class="col-sm-3 control-label">性别</label>
+                        <div class="col-sm-8">
+                            <div class="radio-inline"><label><input type="radio" name="Sex"  value="男" checked> 男</label></div>
+                            <div class="radio-inline"><label><input type="radio" name="Sex" value="女"> 女</label></div>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="selector2" class="col-sm-3 control-label">所属班级</label>
+                        <div class="col-sm-3">
+                            <select name="Grade" id="Grade" class="form-control1 input-sm ">
+                            </select>
+
+                        </div>
+                        <label for="selector2" class="col-sm-2 control-label">班级名称</label>
+                        <div class="col-sm-3">
+                            <select name="ClassTypeName" id="ClassTypeName" class="form-control1 input-sm">
+                                <option value="0">--请选择--</option>
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="selector3" class="col-sm-3 control-label">出生日期</label>
+                        <div class="col-sm-8">
+                            <input type="date" name="Birthday" class="form-control1 ng-invalid ng-invalid-required" ng-model="model.date" required="">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="selector3" class="col-sm-3 control-label">邮箱</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="Email" class="form-control1 input-sm" id="smallinput" placeholder="邮箱">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="selector3" class="col-sm-3 control-label">紧急联系人1</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="LinkName1" class="form-control1 input-sm" id="smallinput" placeholder="紧急联系人1">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="selector3" class="col-sm-3 control-label">联系人电话</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="Tel1" class="form-control1 input-sm" id="smallinput" placeholder="联系人电话">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="selector3" class="col-sm-3 control-label">关系</label>
+                        <div class="col-sm-8">
+                            <!-- <input type="text" name="Relation1" class="form-control1 input-sm" id="smallinput" placeholder=""> -->
+                            <select name="Relation1" class="form-control1 input-sm">
+                                <option value="父亲" selected>父亲</option>
+                                <option value="母亲" >母亲</option>
+                                <option value="爷爷" >爷爷</option>
+                                <option value="奶奶" >奶奶</option>
+                                <option value="外公" >外公</option>
+                                <option value="外婆" >外婆</option>
+                                <option value="其他" >其他</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="selector3" class="col-sm-3 control-label">紧急联系人2</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="LinkName2" class="form-control1 input-sm" id="smallinput" placeholder="紧急联系人2">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="selector3" class="col-sm-3 control-label">联系人电话2</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="Tel2" class="form-control1 input-sm" id="smallinput" placeholder="联系人电话2">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="selector3" class="col-sm-3 control-label">关系</label>
+                        <div class="col-sm-8">
+                            <!-- <input type="text" name="Relation2" class="form-control1 input-sm" id="smallinput" placeholder=""> -->
+                            <select name="Relation2" class="form-control1 input-sm">
+                                <option value="父亲" selected>父亲</option>
+                                <option value="母亲" >母亲</option>
+                                <option value="爷爷" >爷爷</option>
+                                <option value="奶奶" >奶奶</option>
+                                <option value="外公" >外公</option>
+                                <option value="外婆" >外婆</option>
+                                <option value="其他" >其他</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="selector3" class="col-sm-3 control-label">学号</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="StuNO" class="form-control1 input-sm" id="smallinput" placeholder="学号">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtarea1" class="col-sm-3 control-label">地址</label>
+                        <div class="col-sm-8"><textarea name="Address" id="txtarea1" cols="50" rows="4" class="form-control1"></textarea></div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="submit" name="submit" class="btn btn-primary" id="btnAddStudent">确定</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+</div>
+<!-- 增加修改结束       弹出模态框   ------------------------------------------------>
+
+
+<!-- 转班开始         弹出模态框   ------------------------------------------------>
+<div class="modal fade" id="changeClass" tabindex="-1" role="dialog" aria-labelledby="myModalchangeClass" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h2 class="modal-title"><span class="changeClass"></span>转班</h2>
+            </div>
+
+            <div class="modal-body">
+
+                <form id="ChangeClassForm" class="form-horizontal" method="post" action="studentList.html">
+
+                    <div class="form-group">
+                        <label for="selector2" class="col-sm-3 control-label">所属班级</label>
+                        <div class="col-sm-3">
+                            <select name="ChangeGrade" id="ChangeGrade" class="form-control1 input-sm ">
+                            </select>
+
+                        </div>
+                        <label for="selector2" class="col-sm-2 control-label">班级名称</label>
+                        <div class="col-sm-3">
+                            <select name="ChangeClassTypeName" id="ChangeClassTypeName" class="form-control1 input-sm">
+                                <option value="0">--请选择--</option>
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="submit" name="submit" class="btn btn-primary" id="btnChangeClass">确定</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+</div>
+<!-- 转班结束         弹出模态框   ------------------------------------------------>
